@@ -67,11 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.html" />
+    <Content Include="App_Data\company.mdf" />
+    <Content Include="App_Data\company_log.ldf">
+      <DependentUpon>company.mdf</DependentUpon>
+    </Content>
     <Content Include="login.aspx" />
-    <Content Include="login.html" />
     <Content Include="Style_login.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
