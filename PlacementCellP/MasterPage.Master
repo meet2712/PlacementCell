@@ -24,15 +24,17 @@
     </form>
 		<!-- Header -->
 			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">Urban <span>by TEMPLATED</span></a></div>
+				<div class="logo">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+                    &emsp;                    
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server"></asp:ContentPlaceHolder>
+                 </div>
 				<a href="#menu">Menu</a>
 			</header>
-
+        
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                    </asp:ContentPlaceHolder>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
