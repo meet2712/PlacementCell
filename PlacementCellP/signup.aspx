@@ -7,9 +7,13 @@
     <title></title>
 </head>
 <body>
+      <h>Please Contact Admin</h>
     <form id="form1" runat="server">
         <div>
+           
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Home" />
+           
         </div>
-    </form>
+    </form>  
 </body>
 </html>

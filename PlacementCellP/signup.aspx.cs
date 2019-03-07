@@ -13,5 +13,16 @@ namespace PlacementCellP
         {
 
         }
+
+      
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebForm1.aspx");
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("WebForm1.aspx");
+        }
     }
 }
