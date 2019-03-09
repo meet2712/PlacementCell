@@ -71,8 +71,9 @@
     <Content Include="App_Data\company_log.ldf">
       <DependentUpon>company.mdf</DependentUpon>
     </Content>
+    <Content Include="company.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="login.aspx" />
-    <Content Include="signup.aspx" />
     <Content Include="Style_login.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -80,6 +81,16 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="company.aspx.cs">
+      <DependentUpon>company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="company.aspx.designer.cs">
+      <DependentUpon>company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,13 +106,6 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="signup.aspx.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="signup.aspx.designer.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

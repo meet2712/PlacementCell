@@ -23,9 +23,8 @@
                     <h2>Sign Up</h2>
                     <asp:TextBox ID="TextBox1" placeholder="Username" runat="server"></asp:TextBox><br />
                     <asp:TextBox ID="TextBox2" placeholder="Password" TextMode="Password" runat="server"></asp:TextBox><br />
-                    <asp:Button ID="Submit" runat="server" Text="Submit" />
+                    <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
 
-                    <asp:Label ID="Label1" Style="padding-left:4vw;padding-top:2vw;" Font-Size="Medium" ForeColor="red" runat="server" Text=""></asp:Label>
                 </div>
             </div>
         </div>

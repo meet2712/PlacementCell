@@ -13,5 +13,22 @@ namespace PlacementCellP
         {
 
         }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {
+            if((TextBox1.Text=="Admin") && (TextBox2.Text=="admin"))
+            {
+                Session["Username"] = TextBox1.Text;
+                Session["Uid"] = TextBox2.Text;
+                Response.Redirect("company.aspx");
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
+            
+
+        }
     }
+  
 }
