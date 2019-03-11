@@ -85,6 +85,7 @@ namespace PlacementCellP
             TextBox7.Text = dt.Rows[0]["vacancy"].ToString();
 
 
+
         }
 
         protected void Button5_Click(object sender, EventArgs e)
