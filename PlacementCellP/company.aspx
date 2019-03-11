@@ -65,6 +65,21 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button4" runat="server" Text="Edit" OnClick="Button4_Click" Width="80px" />
         
+        <br />
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+        <br />
+        <br />
+        <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GridView1" Width="71px" />
+        <br />
+        <asp:GridView ID="GridView2" runat="server">
+        </asp:GridView>
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;<asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="GridView2" Width="85px" />
+        
     </form>
 </body>
 </html>

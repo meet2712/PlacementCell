@@ -86,5 +86,26 @@ namespace PlacementCellP
 
 
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {   //connnected enviorment
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Table1", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            GridView1.DataSource = dr;
+            GridView1.DataBind();
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            //Disconnected environment
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Table1", con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Table1");
+            con.Close();
+            GridView2.DataSource = ds.Tables["Table1"];
+            GridView2.DataBind();
+        }
     }
 }
