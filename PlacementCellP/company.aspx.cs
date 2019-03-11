@@ -33,14 +33,14 @@ namespace PlacementCellP
         }
 
     
-        protected void btn_update_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("update Table1 where Id=('"+TextBox10.Text+"') set comapany_name=('" + TextBox1.Text + "'), website=('" + TextBox2.Text + "'), date=('" + TextBox3.Text + "'), No_of_Pages=('" + TextBox3.Text + "'), Publication=('" + TextBox4.Text + "') where Id=('" + TextBox5.Text + "')", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+            protected void btn_update_Click(object sender, EventArgs e)
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("update Table1 set company_name=('" + TextBox1.Text + "'), website=('" + TextBox2.Text + "'), date=('" + TextBox3.Text + "'), month=('" + TextBox8.Text + "'), year=('" + TextBox9.Text + "'), location=('" + TextBox4.Text + "'), eligibility=('" + TextBox5.Text + "'), job_roles=('" + TextBox6.Text + "'), vacancy=('" + TextBox7.Text + "') where Id=('" + TextBox10.Text + "')", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-        }
+            }
 
         protected void btn_delete_Click(object sender, EventArgs e)
         {
