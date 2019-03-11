@@ -35,12 +35,19 @@ namespace PlacementCellP
     
         protected void btn_update_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update Table1 where Id=('"+TextBox10.Text+"') set comapany_name=('" + TextBox1.Text + "'), website=('" + TextBox2.Text + "'), date=('" + TextBox3.Text + "'), No_of_Pages=('" + TextBox3.Text + "'), Publication=('" + TextBox4.Text + "') where Id=('" + TextBox5.Text + "')", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
 
         }
 
         protected void btn_delete_Click(object sender, EventArgs e)
         {
-
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Table1 where Id=('" + TextBox10.Text + "')", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         protected void btn_insert_Click(object sender, EventArgs e)
@@ -54,6 +61,29 @@ namespace PlacementCellP
 
         protected void TextBox3_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "select * from Table1 where Id=('" + TextBox10.Text + "')";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "new_table");
+            DataTable dt = ds.Tables[0];
+            con.Close();
+            TextBox10.Text = dt.Rows[0]["Id"].ToString();
+            TextBox1.Text = dt.Rows[0]["company_name"].ToString();
+            TextBox2.Text = dt.Rows[0]["website"].ToString();
+            TextBox3.Text = dt.Rows[0]["date"].ToString();
+            TextBox8.Text = dt.Rows[0]["month"].ToString();
+            TextBox9.Text = dt.Rows[0]["year"].ToString();
+            TextBox4.Text = dt.Rows[0]["location"].ToString();
+            TextBox5.Text = dt.Rows[0]["eligibility"].ToString();
+            TextBox6.Text = dt.Rows[0]["job_roles"].ToString();
+            TextBox7.Text = dt.Rows[0]["vacancy"].ToString();
+
 
         }
     }

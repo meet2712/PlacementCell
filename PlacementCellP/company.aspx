@@ -12,7 +12,7 @@
         <asp:Label ID="Label2" runat="server" Text="Company Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox1" runat="server" Height="16px"></asp:TextBox>
-        <br /><br />
+        <br />
         <br />
         <asp:Label ID="Label3" runat="server" Text="Website:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -47,13 +47,23 @@
         <br />
         <br />
         <br />
+        <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btn_insert" runat="server" OnClick="btn_insert_Click" Text="Insert" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         <asp:Button ID="btn_update" runat="server" OnClick="btn_update_Click" Text="Update" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label9" runat="server" Text="ID: "></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:Button ID="btn_delete" runat="server" Text="Delete" OnClick="btn_delete_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button4" runat="server" Text="Button" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button4" runat="server" Text="Edit" OnClick="Button4_Click" Width="80px" />
         
     </form>
 </body>
