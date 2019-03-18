@@ -96,6 +96,15 @@
         <asp:Label ID="Label9" runat="server" Text="ID: "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox10" runat="server" CssClass="txtbox"></asp:TextBox>
+                    <br />
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br />
+                    <asp:Label ID="Label10" runat="server" Text="Select Company:"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Id" DataValueField="Id" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT [Id] FROM [Table1]"></asp:SqlDataSource>
         <br />
         <br />
         <br />
@@ -113,12 +122,14 @@
        
         <asp:GridView ID="GridView2" runat="server" >
         </asp:GridView>
+                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="GridView2" Width="85px" CssClass="txtbox" />
         <br />
        
 &nbsp;&nbsp;&nbsp;
+                    <asp:GridView ID="GridView3" runat="server">
+                    </asp:GridView>
         <br />
-&nbsp;<asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="GridView2" Width="85px" CssClass="txtbox" />
-                    </div>
+&nbsp;</div>
                     </form>
 </body>
 

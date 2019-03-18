@@ -27,7 +27,10 @@ namespace PlacementCellP
                     {
                         
                     }
-                }
+               
+                
+                
+            }
             
 
         }
@@ -59,10 +62,7 @@ namespace PlacementCellP
             con.Close();
         }
 
-        protected void TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         protected void Button4_Click(object sender, EventArgs e)
         {
@@ -108,5 +108,19 @@ namespace PlacementCellP
             GridView2.DataSource = ds.Tables["Table1"];
             GridView2.DataBind();
         }
+ 
+        protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Table1 where Id=('" + DropDownList1.SelectedValue + "')", con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Table1");
+            con.Close();
+            GridView3.DataSource = ds.Tables["Table1"];
+            GridView3.DataBind();
+        }
     }
+
+
+
 }
