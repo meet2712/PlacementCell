@@ -74,6 +74,7 @@
     <Content Include="company.aspx" />
     <Content Include="Global.asax" />
     <Content Include="login.aspx" />
+    <Content Include="StudentRegistrationForm.aspx" />
     <Content Include="Style_login.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -106,6 +107,13 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentRegistrationForm.aspx.cs">
+      <DependentUpon>StudentRegistrationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegistrationForm.aspx.designer.cs">
+      <DependentUpon>StudentRegistrationForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

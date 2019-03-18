@@ -22,7 +22,7 @@
     <form id="form1" runat="server">
         
                 <div class="container">
-<h2 style="margin-left:13%">Registration</h2>
+<h2 style="margin-left:13%">&nbsp;Company Registration</h2>
         
         <asp:Label ID="Label2" runat="server" Text="Company Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
