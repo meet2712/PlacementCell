@@ -83,9 +83,7 @@ namespace PlacementCellP
             TextBox5.Text = dt.Rows[0]["eligibility"].ToString();
             TextBox6.Text = dt.Rows[0]["job_roles"].ToString();
             TextBox7.Text = dt.Rows[0]["vacancy"].ToString();
-
-
-
+           
         }
 
         protected void Button5_Click(object sender, EventArgs e)
