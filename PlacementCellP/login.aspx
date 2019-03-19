@@ -24,7 +24,6 @@
                     <asp:TextBox ID="TextBox1" placeholder="Username" runat="server"></asp:TextBox><br />
                     <asp:TextBox ID="TextBox2" placeholder="Password" TextMode="Password" runat="server"></asp:TextBox><br />
                     <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
-
                 </div>
             </div>
         </div>
