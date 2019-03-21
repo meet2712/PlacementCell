@@ -23,7 +23,7 @@
     <form id="form1" runat="server">
         
                 <div class="container">
-<h2 style="margin-left:13%">&nbsp;Company Registration</h2>
+<h2 style="margin-left:10%">&nbsp;Company Registration</h2>
         
         <asp:Label ID="Label2" runat="server" Text="Company Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
@@ -90,7 +90,7 @@
 &nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label9" runat="server" Text="ID: "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox10" runat="server" CssClass="txtbox"></asp:TextBox>
+        <asp:TextBox ID="TextBox10" runat="server" CssClass="txtbox" OnTextChanged="TextBox10_TextChanged"></asp:TextBox>
                     <br />
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -123,7 +123,7 @@
         <br />
        
 &nbsp;&nbsp;&nbsp;
-                    <asp:GridView ID="GridView3" runat="server">
+                    <asp:GridView ID="GridView3" runat="server" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
                     </asp:GridView>
         <br />
 &nbsp;</div>

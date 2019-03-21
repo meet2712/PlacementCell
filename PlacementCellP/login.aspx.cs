@@ -24,7 +24,9 @@ namespace PlacementCellP
             }
             else
             {
+
                 Response.Redirect("login.aspx");
+                
             }
             
 

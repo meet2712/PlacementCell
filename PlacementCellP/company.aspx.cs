@@ -126,6 +126,16 @@ namespace PlacementCellP
             GridView3.DataSource = ds.Tables["Table1"];
             GridView3.DataBind();
         }
+
+        protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
