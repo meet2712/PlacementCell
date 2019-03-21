@@ -27,16 +27,25 @@ namespace PlacementCellP
                     {
                         
                     }
-               
-                
-                
-            }
-            
+                }
+
+            //DropDown List 
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Table1", con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "company_name");
+            DataTable dt = ds.Tables[0];
+            con.Close();
+            DropDownList2.DataSource = ds;
+            DropDownList2.DataTextField = "company_name";
+            DropDownList2.DataValueField = "company_name";
+            DropDownList2.DataBind(); 
+
 
         }
 
-    
-            protected void btn_update_Click(object sender, EventArgs e)
+
+        protected void btn_update_Click(object sender, EventArgs e)
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("update Table1 set company_name=('" + TextBox1.Text + "'), website=('" + TextBox2.Text + "'), date=('" + TextBox3.Text + "'), month=('" + TextBox8.Text + "'), year=('" + TextBox9.Text + "'), location=('" + TextBox4.Text + "'), eligibility=('" + TextBox5.Text + "'), job_roles=('" + TextBox6.Text + "'), vacancy=('" + TextBox7.Text + "') where Id=('" + TextBox10.Text + "')", con);

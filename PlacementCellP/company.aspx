@@ -100,6 +100,8 @@
                     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Id" DataValueField="Id" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT [Id] FROM [Table1]"></asp:SqlDataSource>
+                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    </asp:DropDownList>
         <br />
         <br />
         <br />
