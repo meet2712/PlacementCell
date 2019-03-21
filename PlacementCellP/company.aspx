@@ -90,7 +90,7 @@
 &nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label9" runat="server" Text="ID: "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox10" runat="server" CssClass="txtbox" OnTextChanged="TextBox10_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="TextBox10" runat="server" CssClass="txtbox" ></asp:TextBox>
                     <br />
                     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -123,8 +123,54 @@
         <br />
        
 &nbsp;&nbsp;&nbsp;
-                    <asp:GridView ID="GridView3" runat="server" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
+                    <asp:GridView ID="GridView3" runat="server">
                     </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:company %>" DeleteCommand="DELETE FROM [Table1] WHERE [Id] = @original_Id AND (([company_name] = @original_company_name) OR ([company_name] IS NULL AND @original_company_name IS NULL)) AND (([website] = @original_website) OR ([website] IS NULL AND @original_website IS NULL)) AND (([date] = @original_date) OR ([date] IS NULL AND @original_date IS NULL)) AND (([month] = @original_month) OR ([month] IS NULL AND @original_month IS NULL)) AND (([year] = @original_year) OR ([year] IS NULL AND @original_year IS NULL)) AND (([location] = @original_location) OR ([location] IS NULL AND @original_location IS NULL)) AND (([eligibility] = @original_eligibility) OR ([eligibility] IS NULL AND @original_eligibility IS NULL)) AND (([job_roles] = @original_job_roles) OR ([job_roles] IS NULL AND @original_job_roles IS NULL)) AND (([vacancy] = @original_vacancy) OR ([vacancy] IS NULL AND @original_vacancy IS NULL))" InsertCommand="INSERT INTO [Table1] ([company_name], [website], [date], [month], [year], [location], [eligibility], [job_roles], [vacancy]) VALUES (@company_name, @website, @date, @month, @year, @location, @eligibility, @job_roles, @vacancy)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Table1]" UpdateCommand="UPDATE [Table1] SET [company_name] = @company_name, [website] = @website, [date] = @date, [month] = @month, [year] = @year, [location] = @location, [eligibility] = @eligibility, [job_roles] = @job_roles, [vacancy] = @vacancy WHERE [Id] = @original_Id AND (([company_name] = @original_company_name) OR ([company_name] IS NULL AND @original_company_name IS NULL)) AND (([website] = @original_website) OR ([website] IS NULL AND @original_website IS NULL)) AND (([date] = @original_date) OR ([date] IS NULL AND @original_date IS NULL)) AND (([month] = @original_month) OR ([month] IS NULL AND @original_month IS NULL)) AND (([year] = @original_year) OR ([year] IS NULL AND @original_year IS NULL)) AND (([location] = @original_location) OR ([location] IS NULL AND @original_location IS NULL)) AND (([eligibility] = @original_eligibility) OR ([eligibility] IS NULL AND @original_eligibility IS NULL)) AND (([job_roles] = @original_job_roles) OR ([job_roles] IS NULL AND @original_job_roles IS NULL)) AND (([vacancy] = @original_vacancy) OR ([vacancy] IS NULL AND @original_vacancy IS NULL))">
+                        <DeleteParameters>
+                            <asp:Parameter Name="original_Id" Type="Int32" />
+                            <asp:Parameter Name="original_company_name" Type="String" />
+                            <asp:Parameter Name="original_website" Type="String" />
+                            <asp:Parameter Name="original_date" Type="Int32" />
+                            <asp:Parameter Name="original_month" Type="Int32" />
+                            <asp:Parameter Name="original_year" Type="Int32" />
+                            <asp:Parameter Name="original_location" Type="String" />
+                            <asp:Parameter Name="original_eligibility" Type="String" />
+                            <asp:Parameter Name="original_job_roles" Type="String" />
+                            <asp:Parameter Name="original_vacancy" Type="Int32" />
+                        </DeleteParameters>
+                        <InsertParameters>
+                            <asp:Parameter Name="company_name" Type="String" />
+                            <asp:Parameter Name="website" Type="String" />
+                            <asp:Parameter Name="date" Type="Int32" />
+                            <asp:Parameter Name="month" Type="Int32" />
+                            <asp:Parameter Name="year" Type="Int32" />
+                            <asp:Parameter Name="location" Type="String" />
+                            <asp:Parameter Name="eligibility" Type="String" />
+                            <asp:Parameter Name="job_roles" Type="String" />
+                            <asp:Parameter Name="vacancy" Type="Int32" />
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="company_name" Type="String" />
+                            <asp:Parameter Name="website" Type="String" />
+                            <asp:Parameter Name="date" Type="Int32" />
+                            <asp:Parameter Name="month" Type="Int32" />
+                            <asp:Parameter Name="year" Type="Int32" />
+                            <asp:Parameter Name="location" Type="String" />
+                            <asp:Parameter Name="eligibility" Type="String" />
+                            <asp:Parameter Name="job_roles" Type="String" />
+                            <asp:Parameter Name="vacancy" Type="Int32" />
+                            <asp:Parameter Name="original_Id" Type="Int32" />
+                            <asp:Parameter Name="original_company_name" Type="String" />
+                            <asp:Parameter Name="original_website" Type="String" />
+                            <asp:Parameter Name="original_date" Type="Int32" />
+                            <asp:Parameter Name="original_month" Type="Int32" />
+                            <asp:Parameter Name="original_year" Type="Int32" />
+                            <asp:Parameter Name="original_location" Type="String" />
+                            <asp:Parameter Name="original_eligibility" Type="String" />
+                            <asp:Parameter Name="original_job_roles" Type="String" />
+                            <asp:Parameter Name="original_vacancy" Type="Int32" />
+                        </UpdateParameters>
+                    </asp:SqlDataSource>
         <br />
 &nbsp;</div>
                     </form>
