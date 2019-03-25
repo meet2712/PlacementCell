@@ -33,13 +33,13 @@ namespace PlacementCellP
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select * from Table1", con);
             DataSet ds = new DataSet();
-            da.Fill(ds, "company_name");
+            da.Fill(ds, "Id");
             DataTable dt = ds.Tables[0];
             con.Close();
-            DropDownList2.DataSource = ds;
-            DropDownList2.DataTextField = "company_name";
-            DropDownList2.DataValueField = "company_name";
-            DropDownList2.DataBind(); 
+            DropDownList1.DataSource = ds;
+            DropDownList1.DataTextField = "Id";
+            DropDownList1.DataValueField = "Id";
+            DropDownList1.DataBind(); 
 
 
         }
@@ -118,21 +118,49 @@ namespace PlacementCellP
  
         protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
         {
-            
-        }
-
-        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-        {
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select * from Table1 where Id=('" + DropDownList1.SelectedValue + "')", con);
             DataSet ds = new DataSet();
             da.Fill(ds, "Table1");
             con.Close();
-            GridView2.DataSource = ds.Tables["Table1"];
-            GridView2.DataBind();
+            GridView3.DataSource = ds.Tables["Table1"];
+            GridView3.DataBind();
+
+
         }
 
-       
+        protected void Button7_Click(object sender, EventArgs e)
+        {
+
+            SqlDataSource2.InsertParameters.Clear();
+            SqlDataSource2.InsertParameters.Add("company_name", TextBox1.Text);
+            SqlDataSource2.InsertParameters.Add("website", TextBox2.Text);
+            SqlDataSource2.InsertParameters.Add("date", TextBox3.Text);
+            SqlDataSource2.InsertParameters.Add("month", TextBox8.Text);
+            SqlDataSource2.InsertParameters.Add("year", TextBox9.Text);
+            SqlDataSource2.InsertParameters.Add("location", TextBox4.Text);
+            SqlDataSource2.InsertParameters.Add("eligibility", TextBox5.Text);
+            SqlDataSource2.InsertParameters.Add("job_roles", TextBox6.Text);
+            SqlDataSource2.InsertParameters.Add("vacancy", TextBox7.Text);
+            SqlDataSource2.Insert();
+        }
+
+        /*  protected void Button7_Click(object sender, EventArgs e)
+          {
+
+              SqlDataSource2.InsertParameters.Clear();
+              SqlDataSource2.InsertParameters.Add("company_name", TextBox1.Text);
+              SqlDataSource2.InsertParameters.Add("website", TextBox2.Text);
+              SqlDataSource2.InsertParameters.Add("date", TextBox3.Text);
+              SqlDataSource2.InsertParameters.Add("month", TextBox8.Text);
+              SqlDataSource2.InsertParameters.Add("year", TextBox9.Text);
+              SqlDataSource2.InsertParameters.Add("location", TextBox4.Text);
+              SqlDataSource2.InsertParameters.Add("eligibility", TextBox5.Text);
+              SqlDataSource2.InsertParameters.Add("job_roles", TextBox6.Text);
+              SqlDataSource2.InsertParameters.Add("vacancy", TextBox7.Text);
+              SqlDataSource.Insert();
+
+          }*/
     }
 
 
