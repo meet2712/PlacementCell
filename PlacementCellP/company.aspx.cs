@@ -118,16 +118,21 @@ namespace PlacementCellP
  
         protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select * from Table1 where Id=('" + DropDownList1.SelectedValue + "')", con);
             DataSet ds = new DataSet();
             da.Fill(ds, "Table1");
             con.Close();
-            GridView3.DataSource = ds.Tables["Table1"];
-            GridView3.DataBind();
+            GridView2.DataSource = ds.Tables["Table1"];
+            GridView2.DataBind();
         }
 
-        
+       
     }
 
 

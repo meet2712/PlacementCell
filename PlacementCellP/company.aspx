@@ -100,7 +100,7 @@
                     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Id" DataValueField="Id" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT [Id] FROM [Table1]"></asp:SqlDataSource>
-                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:DropDownList ID="DropDownList2" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
                     </asp:DropDownList>
         <br />
         <br />
@@ -125,7 +125,32 @@
 &nbsp;&nbsp;&nbsp;
                     <asp:GridView ID="GridView3" runat="server">
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:company %>" DeleteCommand="DELETE FROM [Table1] WHERE [Id] = @original_Id AND (([company_name] = @original_company_name) OR ([company_name] IS NULL AND @original_company_name IS NULL)) AND (([website] = @original_website) OR ([website] IS NULL AND @original_website IS NULL)) AND (([date] = @original_date) OR ([date] IS NULL AND @original_date IS NULL)) AND (([month] = @original_month) OR ([month] IS NULL AND @original_month IS NULL)) AND (([year] = @original_year) OR ([year] IS NULL AND @original_year IS NULL)) AND (([location] = @original_location) OR ([location] IS NULL AND @original_location IS NULL)) AND (([eligibility] = @original_eligibility) OR ([eligibility] IS NULL AND @original_eligibility IS NULL)) AND (([job_roles] = @original_job_roles) OR ([job_roles] IS NULL AND @original_job_roles IS NULL)) AND (([vacancy] = @original_vacancy) OR ([vacancy] IS NULL AND @original_vacancy IS NULL))" InsertCommand="INSERT INTO [Table1] ([company_name], [website], [date], [month], [year], [location], [eligibility], [job_roles], [vacancy]) VALUES (@company_name, @website, @date, @month, @year, @location, @eligibility, @job_roles, @vacancy)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Table1]" UpdateCommand="UPDATE [Table1] SET [company_name] = @company_name, [website] = @website, [date] = @date, [month] = @month, [year] = @year, [location] = @location, [eligibility] = @eligibility, [job_roles] = @job_roles, [vacancy] = @vacancy WHERE [Id] = @original_Id AND (([company_name] = @original_company_name) OR ([company_name] IS NULL AND @original_company_name IS NULL)) AND (([website] = @original_website) OR ([website] IS NULL AND @original_website IS NULL)) AND (([date] = @original_date) OR ([date] IS NULL AND @original_date IS NULL)) AND (([month] = @original_month) OR ([month] IS NULL AND @original_month IS NULL)) AND (([year] = @original_year) OR ([year] IS NULL AND @original_year IS NULL)) AND (([location] = @original_location) OR ([location] IS NULL AND @original_location IS NULL)) AND (([eligibility] = @original_eligibility) OR ([eligibility] IS NULL AND @original_eligibility IS NULL)) AND (([job_roles] = @original_job_roles) OR ([job_roles] IS NULL AND @original_job_roles IS NULL)) AND (([vacancy] = @original_vacancy) OR ([vacancy] IS NULL AND @original_vacancy IS NULL))">
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Table1] WHERE ([company_name] = @company_name)">
+                        <SelectParameters>
+                            <asp:FormParameter DefaultValue="" FormField="DropDownList2" Name="company_name" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+        <br />
+                    <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource3" DataTextField="Id" DataValueField="Id" AutoPostBack="True">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT [Id] FROM [Table1]"></asp:SqlDataSource>
+                    <br />
+                    <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource4" OnSelectedIndexChanged="GridView4_SelectedIndexChanged">
+                        <Columns>
+                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                            <asp:BoundField DataField="company_name" HeaderText="company_name" SortExpression="company_name" />
+                            <asp:BoundField DataField="website" HeaderText="website" SortExpression="website" />
+                            <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
+                            <asp:BoundField DataField="month" HeaderText="month" SortExpression="month" />
+                            <asp:BoundField DataField="year" HeaderText="year" SortExpression="year" />
+                            <asp:BoundField DataField="location" HeaderText="location" SortExpression="location" />
+                            <asp:BoundField DataField="eligibility" HeaderText="eligibility" SortExpression="eligibility" />
+                            <asp:BoundField DataField="job_roles" HeaderText="job_roles" SortExpression="job_roles" />
+                            <asp:BoundField DataField="vacancy" HeaderText="vacancy" SortExpression="vacancy" />
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:company %>" DeleteCommand="DELETE FROM [Table1] WHERE [Id] = @original_Id AND (([company_name] = @original_company_name) OR ([company_name] IS NULL AND @original_company_name IS NULL)) AND (([website] = @original_website) OR ([website] IS NULL AND @original_website IS NULL)) AND (([date] = @original_date) OR ([date] IS NULL AND @original_date IS NULL)) AND (([month] = @original_month) OR ([month] IS NULL AND @original_month IS NULL)) AND (([year] = @original_year) OR ([year] IS NULL AND @original_year IS NULL)) AND (([location] = @original_location) OR ([location] IS NULL AND @original_location IS NULL)) AND (([eligibility] = @original_eligibility) OR ([eligibility] IS NULL AND @original_eligibility IS NULL)) AND (([job_roles] = @original_job_roles) OR ([job_roles] IS NULL AND @original_job_roles IS NULL)) AND (([vacancy] = @original_vacancy) OR ([vacancy] IS NULL AND @original_vacancy IS NULL))" InsertCommand="INSERT INTO [Table1] ([company_name], [website], [date], [month], [year], [location], [eligibility], [job_roles], [vacancy]) VALUES (@company_name, @website, @date, @month, @year, @location, @eligibility, @job_roles, @vacancy)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Table1] WHERE ([Id] = @Id)" UpdateCommand="UPDATE [Table1] SET [company_name] = @company_name, [website] = @website, [date] = @date, [month] = @month, [year] = @year, [location] = @location, [eligibility] = @eligibility, [job_roles] = @job_roles, [vacancy] = @vacancy WHERE [Id] = @original_Id AND (([company_name] = @original_company_name) OR ([company_name] IS NULL AND @original_company_name IS NULL)) AND (([website] = @original_website) OR ([website] IS NULL AND @original_website IS NULL)) AND (([date] = @original_date) OR ([date] IS NULL AND @original_date IS NULL)) AND (([month] = @original_month) OR ([month] IS NULL AND @original_month IS NULL)) AND (([year] = @original_year) OR ([year] IS NULL AND @original_year IS NULL)) AND (([location] = @original_location) OR ([location] IS NULL AND @original_location IS NULL)) AND (([eligibility] = @original_eligibility) OR ([eligibility] IS NULL AND @original_eligibility IS NULL)) AND (([job_roles] = @original_job_roles) OR ([job_roles] IS NULL AND @original_job_roles IS NULL)) AND (([vacancy] = @original_vacancy) OR ([vacancy] IS NULL AND @original_vacancy IS NULL))">
                         <DeleteParameters>
                             <asp:Parameter Name="original_Id" Type="Int32" />
                             <asp:Parameter Name="original_company_name" Type="String" />
@@ -149,6 +174,9 @@
                             <asp:Parameter Name="job_roles" Type="String" />
                             <asp:Parameter Name="vacancy" Type="Int32" />
                         </InsertParameters>
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="DropDownList3" Name="Id" PropertyName="SelectedValue" Type="Int32" />
+                        </SelectParameters>
                         <UpdateParameters>
                             <asp:Parameter Name="company_name" Type="String" />
                             <asp:Parameter Name="website" Type="String" />
@@ -171,7 +199,9 @@
                             <asp:Parameter Name="original_vacancy" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
-        <br />
+                    <br />
+                    <br />
+                    <br />
 &nbsp;</div>
                     </form>
 </body>
