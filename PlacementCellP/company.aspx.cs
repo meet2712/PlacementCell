@@ -132,17 +132,17 @@ namespace PlacementCellP
         protected void Button7_Click(object sender, EventArgs e)
         {
 
-            SqlDataSource2.InsertParameters.Clear();
-            SqlDataSource2.InsertParameters.Add("company_name", TextBox1.Text);
-            SqlDataSource2.InsertParameters.Add("website", TextBox2.Text);
-            SqlDataSource2.InsertParameters.Add("date", TextBox3.Text);
-            SqlDataSource2.InsertParameters.Add("month", TextBox8.Text);
-            SqlDataSource2.InsertParameters.Add("year", TextBox9.Text);
-            SqlDataSource2.InsertParameters.Add("location", TextBox4.Text);
-            SqlDataSource2.InsertParameters.Add("eligibility", TextBox5.Text);
-            SqlDataSource2.InsertParameters.Add("job_roles", TextBox6.Text);
-            SqlDataSource2.InsertParameters.Add("vacancy", TextBox7.Text);
-            SqlDataSource2.Insert();
+            SqlDataSource3.InsertParameters.Clear();
+            SqlDataSource3.InsertParameters.Add("company_name", TextBox1.Text);
+            SqlDataSource3.InsertParameters.Add("website", TextBox2.Text);
+            SqlDataSource3.InsertParameters.Add("date", TextBox3.Text);
+            SqlDataSource3.InsertParameters.Add("month", TextBox8.Text);
+            SqlDataSource3.InsertParameters.Add("year", TextBox9.Text);
+            SqlDataSource3.InsertParameters.Add("location", TextBox4.Text);
+            SqlDataSource3.InsertParameters.Add("eligibility", TextBox5.Text);
+            SqlDataSource3.InsertParameters.Add("job_roles", TextBox6.Text);
+            SqlDataSource3.InsertParameters.Add("vacancy", TextBox7.Text);
+            SqlDataSource3.Insert();
         }
 
         /*  protected void Button7_Click(object sender, EventArgs e)
