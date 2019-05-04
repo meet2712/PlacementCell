@@ -12,3 +12,8 @@
     <asp:HyperLink ID="HyperLink3" runat="server" href="news.aspx">Placements Announcements</asp:HyperLink>   
 </asp:Content>
 
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder6" runat="server">
+    <h1>PLacement Cell</h1>
+    <p>Institute of Computer Technology<br />Ganpat University</p>
+
+</asp:Content>
