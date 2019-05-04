@@ -6,6 +6,9 @@
     <asp:HyperLink ID="HyperLink1" runat="server" href="login.aspx">Login Page</asp:HyperLink>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
-    <asp:HyperLink ID="HyperLink2" runat="server" href="signup.aspx">Sign Up</asp:HyperLink>   
+    <asp:HyperLink ID="HyperLink2" runat="server" href="StudentRegistrationForm.aspx">Sign Up</asp:HyperLink>   
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder5" runat="server">
+    <asp:HyperLink ID="HyperLink3" runat="server" href="news.aspx">Placements Announcements</asp:HyperLink>   
 </asp:Content>
 

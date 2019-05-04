@@ -81,6 +81,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="WebForm1.aspx" />
+    <Content Include="FileUpload.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="company.aspx.cs">
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
