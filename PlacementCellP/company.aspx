@@ -260,6 +260,28 @@
                             <asp:Parameter Name="original_vacancy" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <asp:DropDownList ID="DropDownList3" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="Id" DataValueField="Id">
+                    </asp:DropDownList>
+                    <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource5">
+                        <Columns>
+                            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id"></asp:BoundField>
+                            <asp:BoundField DataField="company_name" HeaderText="company_name" SortExpression="company_name"></asp:BoundField>
+                            <asp:BoundField DataField="website" HeaderText="website" SortExpression="website"></asp:BoundField>
+                            <asp:BoundField DataField="date" HeaderText="date" SortExpression="date"></asp:BoundField>
+                            <asp:BoundField DataField="month" HeaderText="month" SortExpression="month"></asp:BoundField>
+                            <asp:BoundField DataField="year" HeaderText="year" SortExpression="year"></asp:BoundField>
+                            <asp:BoundField DataField="location" HeaderText="location" SortExpression="location"></asp:BoundField>
+                            <asp:BoundField DataField="eligibility" HeaderText="eligibility" SortExpression="eligibility"></asp:BoundField>
+                            <asp:BoundField DataField="job_roles" HeaderText="job_roles" SortExpression="job_roles"></asp:BoundField>
+                            <asp:BoundField DataField="vacancy" HeaderText="vacancy" SortExpression="vacancy"></asp:BoundField>
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT * FROM [Table1] WHERE ([Id] = @Id)">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="DropDownList3" Name="Id" PropertyName="SelectedValue" Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT [Id] FROM [Table1]"></asp:SqlDataSource>
                 </div>
                     </form>
 </body>

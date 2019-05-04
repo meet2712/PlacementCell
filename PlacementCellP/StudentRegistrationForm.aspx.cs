@@ -19,17 +19,16 @@ namespace PlacementCellP
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+       
+
+      
+
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Table1 (Enrollment Number,First Name,Last Name,Email ID,Contact Number,Semester,Branch,UserId,Password) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + DropDownList1.SelectedValue + "','" + TextBox7.Text + "','" + TextBox8.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into student_info (enrollment_number,firstname,lastname,mail,pnumber,semester,branch,userid,password) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + DropDownList1.SelectedValue + "','" + TextBox7.Text + "','" + TextBox8.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
-        }
-
-        protected void TextBox4_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -59,7 +59,7 @@
         <br />
         <asp:Label ID="Label4" runat="server" Text="Official Mail"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox4" runat="server" OnTextChanged="TextBox4_TextChanged" CssClass="txtbox"></asp:TextBox>
+        <asp:TextBox ID="TextBox4" runat="server"  CssClass="txtbox"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox4" ErrorMessage="Enter your official mail id" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
@@ -90,9 +90,9 @@
         <br />
         <asp:Label ID="Label7" runat="server" Text="Branch"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:DropDownList CssClass="txtbox" ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Branch" DataValueField="Branch" style="width: 95px">
+        <asp:DropDownList CssClass="txtbox" ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Branch" DataValueField="Branch" Width="131px">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT * FROM [Table]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:company %>" SelectCommand="SELECT [Branch] FROM [branch]"></asp:SqlDataSource>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="DropDownList1" ErrorMessage="Enter your branch" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
@@ -113,9 +113,8 @@
         <br />
         <br />
         <br />
-        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Submit" Width="105px" />
     </form>
 </body>
 </html>

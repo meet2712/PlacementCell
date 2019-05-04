@@ -125,8 +125,6 @@ namespace PlacementCellP
             con.Close();
             GridView3.DataSource = ds.Tables["Table1"];
             GridView3.DataBind();
-
-
         }
 
         protected void Button7_Click(object sender, EventArgs e)
