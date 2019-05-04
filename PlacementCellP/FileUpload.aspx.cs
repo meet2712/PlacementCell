@@ -19,7 +19,7 @@ namespace PlacementCellP
             if (FileUpload1.HasFile)
             {
 
-                FileUpload1.SaveAs(@"C:\Users\meetv\Desktop\Sem 4\Web Technology\PlacementCell\PlacementCellP\Files" + FileUpload1.FileName);
+                FileUpload1.SaveAs(@"C:\Users\meetv\Desktop\Sem 4\Web Technology\PlacementCell\PlacementCellP\Files\New folder" + FileUpload1.FileName);
                 Label1.Text = "File Uploaded: " + FileUpload1.FileName;
             }
             else
